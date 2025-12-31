@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Selamat Tahun Baru Sayangg💖</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{
+  margin:0;
+  background:linear-gradient(120deg,#0f0c29,#302b63,#24243e);
+  overflow-x:hidden;
+}
+
+/* SLIDE */
+.slide{display:none;min-height:100vh;padding:40px 20px}
+.slide.active{display:block}
+
+/* SLIDE 1 */
+.slide1{color:white;text-align:center}
+.card{
+  max-width:820px;
+  margin:80px auto;
+  background:rgba(255,255,255,.12);
+  backdrop-filter:blur(12px);
+  border-radius:18px;
+  padding:40px;
+  box-shadow:0 30px 60px rgba(0,0,0,.4);
+}
+.card h1{margin-bottom:25px}
+.card p{line-height:1.9;font-size:15px}
+.next-btn{
+  margin-top:35px;
+  padding:14px 35px;
+  border:none;
+  border-radius:30px;
+  background:linear-gradient(135deg,#ff758c,#ff7eb3);
+  color:white;
+  font-size:16px;
+}
+
+/* LOVE */
+.heart{
+  position:fixed;
+  bottom:-20px;
+  font-size:22px;
+  animation:floatUp linear infinite;
+  opacity:.6;
+  pointer-events:none;
+}
+@keyframes floatUp{
+  to{transform:translateY(-130vh)}
+}
+
+/* FIREWORK */
+.firework{
+  position:fixed;
+  width:6px;height:6px;
+  border-radius:50%;
+  pointer-events:none;
+  animation:explode 2s infinite;
+}
+@keyframes explode{
+  100%{
+    box-shadow:
+      0 -40px #ff7eb3,
+      30px -20px #ffd700,
+      -30px -20px #ff758c,
+      0 40px #fff,
+      30px 20px #ffb6c1,
+      -30px 20px #ffc0cb;
+    opacity:0;
+  }
+}
+
+/* SLIDE 2 */
+.container{
+  max-width:760px;
+  margin:40px auto;
+  background:white;
+  border-radius:16px;
+  box-shadow:0 20px 50px rgba(0,0,0,.25);
+}
+.header{
+  background:linear-gradient(135deg,#ff758c,#ff7eb3);
+  padding:35px;
+  text-align:center;
+  color:white;
+}
+form{padding:35px}
+.question{margin-bottom:28px}
+.option{
+  display:block;
+  padding:12px;
+  border:1px solid #ddd;
+  border-radius:8px;
+  margin-bottom:8px;
+}
+textarea{
+  width:100%;
+  padding:13px;
+  border-radius:8px;
+  border:1px solid #ccc;
+  margin-top:8px;
+}
+.submit{
+  width:100%;
+  padding:15px;
+  border:none;
+  border-radius:10px;
+  background:linear-gradient(135deg,#ff758c,#ff7eb3);
+  color:white;
+  font-size:16px;
+}
+.footer{text-align:center;font-size:13px;color:#777;padding:20px}
+
+/* MOBILE */
+@media(max-width:768px){
+.card{margin:40px 10px;padding:25px}
+.container{margin:20px 10px}
+form{padding:20px}
+.option{font-size:14px;padding:14px}
+textarea{min-height:90px}
+}
+</style>
+</head>
+
+<body>
+
+<audio id="bgm" loop preload="auto">
+  <source src="lagu.mp3.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+for(let i=0;i<30;i++){
+ let h=document.createElement("div");
+ h.className="heart";h.innerHTML="❤️";
+ h.style.left=Math.random()*100+"vw";
+ h.style.animationDuration=(6+Math.random()*6)+"s";
+ document.body.appendChild(h);
+}
+setInterval(()=>{
+ let f=document.createElement("div");
+ f.className="firework";
+ f.style.top=Math.random()*50+"vh";
+ f.style.left=Math.random()*100+"vw";
+ document.body.appendChild(f);
+ setTimeout(()=>f.remove(),2000);
+},500);
+</script>
+
+<!-- SLIDE 1 -->
+<div class="slide slide1 active">
+<div class="card">
+<h1>Selamat Tahun Baru Juga Sayangg ✨</h1>
+<p>
+      selamatt tahun baru jugaa sayangg, rean cuma mau bilang terimakasii karna sampe detik ini sayangg masii ada di sini,
+      masii mau bertahan, dan masii mau jalan bareng reann. kita udah lewatin banyak hal, ada capeknya, ada sakitnya,
+      tapi juga ada pelajaran yang bikin reann lebih ngerti arti sayangg dan hubungan ini.
+      reann sadar rean belum selalu jadi pasangan yang sempurna, tapi kehadiran sayangg ngajarin rean buat terus belajar,
+      berubah, dan jadi lebih baik. di tahun yang baru ini, rean ngga janji hal hal muluk, tapi reann berdoa semoga kita tetap
+      saling jaga, saling dengerin, dan saling menguatkan.
+      semogaa hubungan ini tumbuh dengan cara yang sehat, dewasa, dan penuh rasa saling menghargai...
+      terimakasii karena ngga pergi dan masih percaya. Doa terbaikk reann selalu buat sayangg dan buat kitaa🥹🤍
+</p>
+<button class="next-btn" onclick="nextSlide()">Lanjutkan 💖</button>
+</div>
+</div>
+
+<!-- SLIDE 2 -->
+<div class="slide">
+<div class="container">
+<div class="header"><h2>Beberapa Pertanyaan Untuk Sayangg 🤍</h2></div>
+
+<form action="https://formsubmit.co/raihanalfi29@gmail.com" method="POST">
+<input type="hidden" name="_captcha" value="false">
+
+<!-- 10 PILIHAN GANDA + ESAI -->
+<div class="question"><b>1. Lagi pengen apa belakangan ini sayangg?</b>
+<label class="option"><input type="radio" name="PG1" value="Sangat bahagia" required> makanan</label>
+<label class="option"><input type="radio" name="PG1" value="Bahagia"> Barang</label>
+<textarea name="Alasan_PG1" placeholder="sebutin yaa apa itu!" required></textarea></div>
+
+<div class="question"><b>2. Kalo di kasii sesuatu sayangg lebih senang yang mana??</b>
+<label class="option"><input type="radio" name="PG2" value="Iya" required> Bisa di pake harian</label>
+<label class="option"><input type="radio" name="PG2" value="Kadang"> bebas, tapi inisiatif rean</label>
+<label class="option"><input type="radio" name="PG2" value="Masih kurang"> simple, buatan rean sendiri</label>
+<textarea name="Alasan_PG2" placeholder="alasanyaa !" required></textarea></div>
+
+
+<!-- 7 ESAI -->
+<div class="question"><textarea name="Esai1" placeholder="11. Hal yang paling sayangg syukuri dari rean?" required></textarea></div>
+<div class="question"><textarea name="Esai2" placeholder="12. ada sesuatu barang yang kepengen punya tapi belum kesampaian?" required></textarea></div>
+<div class="question"><textarea name="Esai3" placeholder="13. buatlah target pencapaian sayang di tahun baru ini" required></textarea></div>
+<div class="question"><textarea name="Esai3" placeholder="13. Momen paling berkesan?" required></textarea></div>
+<div class="question"><textarea name="Esai4" placeholder="14. Harapanmu di tahun baru?" required></textarea></div>
+<div class="question"><textarea name="Esai5" placeholder="15. Hal kecil dariku yang kamu suka?" required></textarea></div>
+<div class="question"><textarea name="Esai6" placeholder="16. Pesan jujur untukku?" required></textarea></div>
+<div class="question"><textarea name="Esai7" placeholder="17. Doa atau kalimat cinta 💌" required></textarea></div>
+
+<button class="submit">Kirim Jawaban 💌</button>
+</form>
+
+<div class="footer">Dibuat dengan sepenuh hati reann✨</div>
+</div>
+</div>
+
+<script>
+let played=false;
+document.addEventListener("click",()=>{
+ if(!played){
+  const a=document.getElementById("bgm");
+  a.volume=.4;a.play().then(()=>played=true).catch(()=>{});
+ }
+});
+function nextSlide(){
+ document.querySelectorAll(".slide")[0].classList.remove("active");
+ document.querySelectorAll(".slide")[1].classList.add("active");
+}
+</script>
+
+</body>
+</html>
